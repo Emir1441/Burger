@@ -1,0 +1,21 @@
+
+.navbar-admin {
+    background: yellow;
+}
+
+ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем отступы*/
+    padding-left: 0; /*убираем отступы*/
+    text-align: end;
+}
+  a {
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+    
+}
+  li {
+    /*Размещаем список горизонтально для реализации меню*/
+    margin-right:5px; /*Добавляем отступ у пунктов меню*/
+ display: inline-block;
+
+}

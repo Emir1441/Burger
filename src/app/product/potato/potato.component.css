@@ -1,0 +1,53 @@
+
+
+
+.container {
+    background: wheat;
+    border: rgb(0, 0, 0) 1px solid;
+    text-align: center;
+    padding: 20px 0px;
+    
+    
+  }
+  
+  .product-block {
+    border: black 1px solid;
+    display: inline-block;
+    margin: 20px 15px;
+    padding: 10px;
+    
+    
+    
+   
+    
+  } 
+
+.product-block:hover {
+    transform: scale(1.1) ;
+    transition: transform 0.4s;
+}
+
+
+
+.product-img {
+    border: black 1px solid;
+    text-align: center; 
+   
+}
+
+.product-title {
+    text-align: center;
+  
+    border: black 1px dashed;
+   
+
+}
+
+
+
+
+
+.btn-cart {
+    text-align: center;
+    border: black 1px dashed;
+}

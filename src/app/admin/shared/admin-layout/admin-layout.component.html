@@ -1,0 +1,32 @@
+<nav>
+  <h2>
+    <a [routerLink]="['/']">Pizza-Burger House</a>
+  </h2>
+
+  <ul *ngIf="auth.isAuthenticated(); else login  " class="navbar-admin">
+    <li routerLinkActive="active">
+      <a class="header-link" [routerLink]="['/admin','dashboard']">Панель управления</a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="header-link" [routerLink]="['/admin','add']">Добавть продукт</a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="header-link" [routerLink]="['/admin','orders']">Заказы клиентов</a>
+    </li>
+    <li routerLinkActive="active">
+      <a class="header-link" href="#" (click)="logout($event)">Выход</a>
+    </li>
+  </ul>
+
+
+  <ng-template #login>
+    <ul>
+      <li routerLinkActive="active">
+        <a class="header-link" [routerLink]="['/admin','login']">Вход</a>
+      </li>
+    </ul>
+  </ng-template>
+
+</nav>
+
+<router-outlet></router-outlet>

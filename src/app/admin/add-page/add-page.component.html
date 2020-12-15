@@ -1,0 +1,83 @@
+
+
+<form  [formGroup]="form" (ngSubmit)="submit()">
+
+    <h2>Добавить продукт</h2>
+
+
+    <div >
+        <label for="type">Тип товара</label>
+      <select formControlName="type">
+          <option value="Pizza">Пицца</option>
+          <option value="Burger">Бургер</option>
+          <option value="Potato">Картофель</option>
+          <option value="Sauce">Соус</option>
+          <option value="Drink">Напитки</option>
+      </select>
+        <div *ngIf="form.get('type').touched &&  form.get('type').invalid" >
+            <small *ngIf="form.get('type').errors.required">Выбирите тип товара</small>
+        </div>
+    </div>
+
+
+    <div >
+        <label for="title">Название</label>
+        <input id="title" type="title" formControlName="title">
+        <div *ngIf="form.get('title').touched &&  form.get('title').invalid" >
+            <small *ngIf="form.get('title').errors.required">Введите название товара</small>
+        </div>
+    </div>
+
+
+
+    <div>
+        <label for="photo">Изображение</label>
+        <quill-editor></quill-editor>
+        
+      
+    </div>
+
+    
+    <div >
+        <label for="info ">Информация</label>
+      
+        
+    </div>
+   
+    
+   
+
+   
+
+    <div>
+        <label for="type">Тип товара</label>
+        <input id="type" type="type" formControlName="type">
+        <div *ngIf="form.get('type').touched &&  form.get('type').invalid" >
+            <small *ngIf="form.get('type').errors.required">Выбирите тип товара</small>
+        </div>
+    </div>
+
+
+
+    <div >
+        <label for="price">Цена</label>
+        <input id="price" type="price" formControlName="price">
+        <div *ngIf="form.get('price').touched &&  form.get('price').invalid" >
+            <small *ngIf="form.get('price').errors.required">Введите цену товара</small>
+        </div>
+    </div>
+
+ 
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submited">Добавить</button>
+
+</form>
+
+
+
+
+
+
+
+
+
+

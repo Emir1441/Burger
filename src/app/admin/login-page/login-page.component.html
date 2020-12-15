@@ -1,0 +1,91 @@
+<!-- <form class="form-block" [formGroup]="form" (ngSubmit)="submit()">
+    <h2>Войти в аккаунт</h2>
+    <div class="form-control">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Логин" formControlName="email">
+    </div>
+    <div *ngIf="form.get('email').touched &&  form.get('email').invalid">
+        <small *ngIf="form.get('email').errors.required">Введите email</small>
+        <small *ngIf="form.get('email').errors.email">Введите правильный email</small>
+    </div>
+
+    <div class="form-control">
+
+        <label for="password">Пароль</label>
+        <input id="password" type="password" placeholder="Пороль" formControlName="password">
+    </div>
+    <div *ngIf="form.get('password').touched && form.get('password').invalid" class="validation">
+        <small *ngIf="form.get('password').errors.required">Введите пароль</small>
+        <small *ngIf="form.get('password').errors.minlength">Пароль не должен быть 6 символов</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submited">Войти</button>
+</form> -->
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->
+
+
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" [formGroup]="form" (ngSubmit)="submit()">
+            <input type="email" placeholder="Логин" formControlName="email" />
+            <div *ngIf="form.get('email').touched &&  form.get('email').invalid">
+                <small *ngIf="form.get('email').errors.required">Введите email</small>
+                <small *ngIf="form.get('email').errors.email">Введите правильный email</small>
+            </div>
+
+
+
+            <input type="password" placeholder="Пороль" formControlName="password" />
+            <div *ngIf="form.get('password').touched && form.get('password').invalid" class="validation">
+                <small *ngIf="form.get('password').errors.required">Введите пароль</small>
+                <small *ngIf="form.get('password').errors.minlength">Пароль не должен быть 6 символов</small>
+            </div>
+
+            <button type="submit" class="message" class="btn btn-primary btn-block"
+                [disabled]="form.invalid || submited">Войти</button>
+
+            <p class="message">Нет регистрации? <a href="#">Создать Аккаунт</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<!-- <div class="login-page">
+    <div class="form">
+        <form class="register-form">
+            <input type="text" placeholder="Введите логин" />
+            <input type="password" placeholder="Пороль" />
+            <input type="text" placeholder="Email адресс" />
+            <button>Создать</button>
+            <p class="message">Уже зарегистрированы? <a href="#">Войти</a></p>
+        </form>
+</div> -->
+
+
+
+
+
+
+
+<!-- <div class="login-page">
+    <div class="form">
+        <form class="login-form">
+            <input type="email" placeholder="Логин" />
+            <input type="password" placeholder="Пороль" />
+            <button>Войти</button>
+
+            <p class="message">Нет регистрации? <a href="#">Создать Аккаунт</a></p>
+        </form>
+    </div>
+</div> -->
+
+
+<!-- 
+---------------------------------------------------- -->
